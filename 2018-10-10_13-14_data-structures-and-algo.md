@@ -56,7 +56,7 @@ void bubbleSort(int* array, int lenght) {
 
 void selectionSort(int *array, int p) {
     for (int i = 0; i < p; i++) {
-        int idx = 0;
+        int idx = i;
         for (int c = i + 1; c < p; c++) {
             if (array[c] < array[idx]) {
                 idx = c;
