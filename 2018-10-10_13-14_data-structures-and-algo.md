@@ -5,7 +5,7 @@ tags:
 
 # Свойства на сортировките - bubble sort, insertion sort, selection sort
 - stable sort, in place vs outplace (не използва никаква допълнителна памет),
-time complexity, space complexity, number of comparisons, adaptivity (ако му дадем инсършън сорт, мн по-бързо ще ги сортира, входните данни дали ако имат някакво свойство, дали ще се промени бързината), Online (когато не се нуждае целия вход да му се подаде, примерно можем да подаваме един по един и винаги ще ги държи сортирани)
+time complexity, space complexity, number of comparisons, adaptivity (ако му дадем инсършън сорт, мн по-бързо ще ги сортира, входните данни дали ако имат някакво свойство, дали ще се промени бързината), Online (когато не се нуждае целия вход да му се подаде, примерно можем да подаваме един по един и винаги ще ги държи сортирани с линейна сложност)
 
 ## - Може ли да се дефинира сортировка само ако знаем дали един елемент е по-малък от друг
     - не защото, ако А < Б, Б < С, С < А - това се чупи
@@ -83,5 +83,41 @@ void selectionSort(int *array, int p) {
 - всеки елемент го повдига на трета на степен на масив ест
 - функция, която приема стринг и връща обърнатия го обръща
 - ф-ция, която проверява дали един стринг е палиндром
+
+## Insertion sort
+void insertionSort(int* array, int lenght) {
+    for (int i = 1; < length; i++) {
+        for (int idx = i; idx > 0 && array[idx] < array [idx - 1]; idx--) {
+            swap(array[idx], array[idx - 1]);
+        }
+    }
+}
+
+- time complex: O(n^2)
+- space complex: O(1)
+- stable: true
+- online: Yes
+- adaptive: true
+- swaps: n^2
+- comparisons: n^2
+- in place: true
+
+## Merge sort
+- time: O(n.log(n))
+- space: O(m)
+- stable: true
+- online: false
+- adaptive: false
+- swaps: n
+- comparisons:
+- in place: false
+- parallel: true
+- external: true - if do not have enough space for the array, you can cut it in pieces and because of the property of the algorithm we can sort for a linear time the sorted pieces (the other type is interna;)
+
+## Tim Sort
+- time: O(n.log(n)) (worst) - O(n) (best)
+- 
+
+
 
 
