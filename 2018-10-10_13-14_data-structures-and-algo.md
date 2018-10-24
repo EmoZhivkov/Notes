@@ -116,7 +116,19 @@ void insertionSort(int* array, int lenght) {
 
 ## Tim Sort
 - time: O(n.log(n)) (worst) - O(n) (best)
-- 
+
+## Quick Sort
+- Всички по-малки от ляво, всички по големи надясно от даден "пивот" елемент
+
+- time complexity: worst(N^2), average(n*log(n))
+- storage complexity: c*log(n)
+- stable: false
+- worst-case comparisons: okolo (1/2) * N^2
+
+
+
+
+
 
 
 
